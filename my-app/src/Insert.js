@@ -10,23 +10,23 @@ class Insert extends Component {
             <form action="/" method="post">
 
                 <div className="container">
-                    <form>
-                        <div className="form-group">
-                            <label>カテゴリー</label>
-                            <input type="text" name="category" className="form-control" />
-                        </div>
-                    </form>
+
+                    <div className="form-group">
+                        <label>カテゴリー</label>
+                        <input type="text" name="category" className="form-control" />
+                    </div>
+
                 </div>
 
                 <div className="container">
-                    <form>
-                        <div className="form-group">
-                            <label>金額</label>
-                            <input type="text" name="price" className="form-control" />
-                        </div>
-                        <input type="submit" />
 
-                    </form>
+                    <div className="form-group">
+                        <label>金額</label>
+                        <input type="text" name="price" className="form-control" />
+                    </div>
+                    <input type="submit" />
+
+
 
                 </div>
             </form>
