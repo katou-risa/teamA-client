@@ -16,7 +16,7 @@ class App extends Component {
         <Header />
         <Piechart />
         <Insert />
-        <Table />
+        <Table data={this.props.data} />
       </div>
     );
   }

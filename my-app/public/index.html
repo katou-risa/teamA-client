@@ -28,28 +28,38 @@
   <!-- 円グラフチャート -->
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
+
+
+
     google.charts.load('current', { 'packages': ['corechart'] });
     google.charts.setOnLoadCallback(drawChart);
 
+
     function drawChart() {
-
-      var data = google.visualization.arrayToDataTable([
-        ['出費', '円 / 月'],
-        ['固定費', 110000],
-        ['食費', 20000],
-        ['交通費', 20000],
-        ['交際費', 6000],
-        ['その他', 12000]
-      ]);
-
+      let array = [];
+      fetch('http://localhost:3001/api/consumption')
+        .then(res => res.json())
+        .then(data =>
+          data.forEach(record => {
+            let column = [];
+            Object.values(record).forEach(field => {
+              column.push(field);
+            });
+            array.push(column);
+          });
+      var dat = google.visualization.arrayToDataTable(array);
       var options = {
         title: '今月の支出管理'
       };
 
       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
 
-      chart.draw(data, options);
+      chart.draw(dat, options);
+          );
+
+
     }
+    // export default Piechart2;
   </script>
 
 
