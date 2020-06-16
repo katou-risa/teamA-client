@@ -24,81 +24,82 @@
 </head>
 
 <body>
-    <!-- <div class="p-3 mb-2 bg-info text-white">.bg-info -->
-    <!-- </div> -->
-</body>
-<!-- 円グラフチャート -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
 
-    function drawChart() {
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
 
-        var data = google.visualization.arrayToDataTable([
-            ['出費', '円 / 月'],
-            ['固定費', 110000],
-            ['食費', 20000],
-            ['交通費', 20000],
-            ['交際費', 6000],
-            ['その他', 12000]
-        ]);
+        function drawChart() {
 
-        var options = {
-            title: '今月の支出管理'
-        };
+            var data = google.visualization.arrayToDataTable([
+                ['出費', '円 / 月'],
+                ['固定費', 110000],
+                ['食費', 20000],
+                ['交通費', 20000],
+                ['交際費', 6000],
+                ['その他', 12000]
+            ]);
 
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+            var options = {
+                title: '今月の支出管理'
+            };
 
-        chart.draw(data, options);
-    }
-</script>
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+    </script>
 
 
-<!-- テーブルチャート -->
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script type="text/javascript">
+    <!-- テーブルチャート -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
-    google.charts.load('current', { 'packages': ['table'] });
-    google.charts.setOnLoadCallback(drawTable);
+        google.charts.load('current', { 'packages': ['table'] });
+        google.charts.setOnLoadCallback(drawTable);
 
-    function drawTable() {
-        var data = new google.visualization.DataTable();
-        // data.addColumn('id', 'id');
-        data.addColumn('string', 'カテゴリー');
-        data.addColumn('number', '金額');
-        data.addRows([
-            ['固定費', { f: '110000円' },],
-            ['食費', { f: '20000円' },],
-            ['交通費', { f: '20000円' },],
-            ['交際費', { f: '6000円' },],
-            ['その他', { f: '12000円' },]
+        function drawTable() {
+            var data = new google.visualization.DataTable();
+            // data.addColumn('id', 'id');
+            data.addColumn('string', 'カテゴリー');
+            data.addColumn('number', '金額');
+            data.addRows([
+                ['固定費', { f: '110000円' },],
+                ['食費', { f: '20000円' },],
+                ['交通費', { f: '20000円' },],
+                ['交際費', { f: '6000円' },],
+                ['その他', { f: '12000円' },]
 
-        ]);
+            ]);
 
-        var table = new google.visualization.Table(document.getElementById('table_div'));
+            var table = new google.visualization.Table(document.getElementById('table_div'));
 
-        table.draw(data, { showRowNumber: false, width: '80%', height: '100%' });
-    }
-</script>
+            table.draw(data, { showRowNumber: false, width: '80%', height: '100%' });
+        }
+    </script>
 
 
-<center>
-    <h1>家計簿アプリ</h1>
+    <center>
+        <h1>家計簿アプリ</h1>
 
-</center>
+    </center>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-<!-- <div class="p-3 mb-2 bg-info text-white">.bg-info
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <!-- <div class="p-3 mb-2 bg-info text-white">.bg-info
 </div> -->
 </body>
 
 </html>
+
+
+
+<!-- <h1 style class="bg-info">家計簿アプリ</h1> -->
